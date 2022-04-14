@@ -1,0 +1,12 @@
+{
+  "name": "@character-builder/server",
+  "version": "1.0.0",
+  "description": "Fastify server for the character builder",
+  "main": "index.js",
+  "author": "Brian Adams",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fastify": "^3.28.0"
+  }
+}
