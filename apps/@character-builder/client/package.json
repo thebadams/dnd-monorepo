@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Brian Adams",
   "license": "MIT",
-  "private": true
+  "private": true,
+	"scripts": {
+		"build": "echo \"Build Client\""
+	}
 }

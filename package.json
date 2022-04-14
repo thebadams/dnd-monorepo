@@ -5,9 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"build": "turbo run build"
   },
-	"workspaces": ["apps/**/*"],
+	"workspaces": ["apps/**/*", "packages/*"],
   "keywords": [],
   "author": "",
   "license": "ISC",
