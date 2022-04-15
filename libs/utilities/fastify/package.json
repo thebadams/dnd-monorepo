@@ -1,0 +1,16 @@
+{
+  "name": "@utilities/fastify",
+  "version": "1.0.0",
+  "description": "Utility functions to be used in any fastify application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Brian Adams",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "fastify": "^3.28.0"
+  },
+	"scripts": {
+		"build": "tsc -p tsconfig.json"
+	}
+}
