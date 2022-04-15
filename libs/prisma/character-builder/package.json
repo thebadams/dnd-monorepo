@@ -1,0 +1,18 @@
+{
+  "name": "@character-builder/prisma",
+  "version": "1.0.0",
+  "description": "Prisma client definitions for the dnd-5e-api",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "prisma": "^3.12.0"
+  },
+  "scripts": {
+    "build": "prisma generate && tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.12.0"
+  }
+}
+
