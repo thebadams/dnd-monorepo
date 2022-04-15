@@ -10,6 +10,7 @@
     "fastify": "^3.28.0"
   },
 	"scripts": {
-		"build": "echo \"Build Server\""
+		"build": "echo \"Build Server\"",
+		"dev": "echo \"Dev Server\""
 	}
 }
