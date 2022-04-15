@@ -1,1 +1,1 @@
-export * from "../prisma/dist/index";
+import * as prisma from "../prisma/dist";

@@ -1,6 +1,6 @@
 {
   "name": "@character-builder/prisma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prisma client definitions for the dnd-5e-api",
   "main": "dist/index.js",
   "license": "MIT",

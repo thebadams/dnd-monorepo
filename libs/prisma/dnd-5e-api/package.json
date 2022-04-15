@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Prisma client definitions for the dnd-5e-api",
   "main": "dist/index.js",
+	"types": "prisma/dist/index.d.ts",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "prisma": "^3.12.0"
+    "prisma": "^3.12.0",
+		"typescript": "4.6.3"
   },
   "scripts": {
     "build": "prisma generate && tsc -p tsconfig.json"

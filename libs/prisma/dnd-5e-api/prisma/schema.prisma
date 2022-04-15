@@ -3,7 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
-	output = "./dist/"
+	output = "../../../../node_modules/.prisma/@dnd-5e-api/client"
 }
 
 datasource db {

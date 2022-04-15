@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "fastify": "^3.28.0",
-		"@dnd-5e-api/prisma": "1.0.0"
+		"@dnd-5e-api/prisma": "workspace: ^1.0.0",
+		"@prisma/client": "3.12.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",
