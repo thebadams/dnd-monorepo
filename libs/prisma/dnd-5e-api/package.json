@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Prisma client definitions for the dnd-5e-api",
   "main": "dist/index.js",
-	"types": "prisma/dist/index.d.ts",
+	"types": "dist/index.d.ts",
   "license": "MIT",
   "private": true,
   "devDependencies": {
