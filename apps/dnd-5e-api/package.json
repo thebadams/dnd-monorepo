@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.json",
-		"dev": "ts-node src/index.ts"
+		"dev": "ts-node src/index.ts",
+		"watch": "ts-node-dev src/index.ts"
   },
   "dependencies": {
     "fastify": "^3.28.0"
