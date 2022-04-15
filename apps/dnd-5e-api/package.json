@@ -10,7 +10,8 @@
 		"watch": "ts-node-dev src/index.ts"
   },
   "dependencies": {
-    "fastify": "^3.28.0"
+    "fastify": "^3.28.0",
+		"@dnd-5e-api/prisma": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",

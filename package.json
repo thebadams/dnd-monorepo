@@ -11,7 +11,7 @@
 		"dev:api": "turbo run dev --filter=dnd-5e-api",
 		"watch:api": "turbo run watch --filter=dnd-5e-api"
   },
-	"workspaces": ["apps/**/*", "packages/*"],
+	"workspaces": ["apps/**/*", "packages/*", "libs/**/*"],
   "keywords": [],
   "author": "",
   "license": "ISC",
