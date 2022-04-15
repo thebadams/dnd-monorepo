@@ -16,7 +16,7 @@ export const registerServer = async () => {
   });
 
   return {
-    PORT,
+    port: PORT,
     server,
   };
 };
