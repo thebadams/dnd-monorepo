@@ -1,17 +1,19 @@
-import fastify from "fastify";
+import { FastifyInstance } from "fastify";
+import { registerServer } from "./config/server";
 
-const server = fastify();
+const bootstrap = async (
+  registerServer: () => Promise<{
+    PORT: number | string;
+    server: FastifyInstance;
+  }>
+) => {
+  const { server, PORT } = await registerServer();
 
-server.get("/", async (request, reply) => {
-  return {
-    message: "Hello World",
-  };
-});
+  try {
+    await server.listen(PORT);
+  } catch (error) {
+    server.log.error(error);
+  }
+};
 
-server.get("/greeting", async (request, reply) => {
-  return {
-    message: "Hello There, General Kenobi",
-  };
-});
-
-server.listen(3000).then(() => console.log("Server Started On PORT 3000"));
+bootstrap(registerServer);

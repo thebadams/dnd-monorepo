@@ -1,0 +1,11 @@
+### GET / - EXPECT HELLO WORLD
+# {
+# 	 message: "Hello World"
+#  }
+GET http://localhost:3000/
+
+### GET /greeting - EXPECT GENERAL KENOBI
+# {
+# 	message: "Hello There, General Kenobi"
+# }
+GET http://localhost:3000/greeting
