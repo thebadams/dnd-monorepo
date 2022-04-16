@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Utility functions to be used in any fastify application",
   "main": "dist/index.js",
+	"type": "commonjs",
   "types": "dist/index.d.ts",
   "author": "Brian Adams",
   "license": "MIT",

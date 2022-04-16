@@ -9,6 +9,7 @@
     "dev": "ts-node src/index.ts",
     "watch": "ts-node-dev src/index.ts"
   },
+
   "dependencies": {
     "@dnd-5e-api/prisma": "workspace: ^1.0.0",
     "fastify": "^3.28.0",
