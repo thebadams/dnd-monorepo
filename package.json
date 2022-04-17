@@ -14,7 +14,7 @@
   },
   "workspaces": [
     "apps/**/*",
-    "packages/*",
+    "packages/**/*",
     "libs/**/*"
   ],
   "keywords": [],

@@ -1,0 +1,9 @@
+{
+  "name": "@dnd-5e-api/docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+	"scripts": {
+		"build": "sudo docker-compose build"
+}
+}
