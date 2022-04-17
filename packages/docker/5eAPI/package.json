@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
 	"scripts": {
-		"build": "sudo docker-compose build"
+		"build": "sudo docker-compose build",
+		"start": "sudo docker-compose start"
+
 },
 "files": ["docker-compose.yml"]
 }
