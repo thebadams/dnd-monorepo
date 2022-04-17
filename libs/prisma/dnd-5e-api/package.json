@@ -15,7 +15,19 @@
 		"format": "prisma format",
 		"migrate": "prisma migrate dev"
   },
+	"nx": {
+		"targets": {
+			"migrate": {
+				"outputs": ["./prisma/migrations/*", "../../../../node_modules/.prisma/dnd-5e-api/client/"],
+				"dependsOn": [{
+					"target": "start",
+					"projects": "dependencies"
+				}]
+						}
+		}
+	},
   "dependencies": {
-    "@prisma/client": "^3.12.0"
+    "@prisma/client": "^3.12.0",
+		"@dnd-5e-api/docker": "workspace: *"
   }
 }
