@@ -6,7 +6,7 @@ let server: FastifyInstance;
 before("All", async function () {
   const fastifyRegistration = await registerServer();
   server = fastifyRegistration.server;
-  console.log(server);
+  //console.log(server);
 });
 
 describe("Server", function () {
