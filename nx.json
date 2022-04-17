@@ -38,7 +38,13 @@
         "target": "package",
         "projects": "dependencies"
       }
-    ]
+    ],
+		"test": [
+			{
+				"target": "test",
+				"projects": "dependencies"
+			}
+		]
   },
   "affected": {
     "defaultBase": "main"

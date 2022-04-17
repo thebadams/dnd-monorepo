@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node src/index.ts",
     "watch": "ts-node-dev src/index.ts",
-		"test": "mocha --require ts-node/register ./test/*.test.ts"
+		"test": "mocha --require ts-node/register ./test/*.spec.ts"
   },
   "dependencies": {
     "@dnd-5e-api/prisma": "workspace: ^1.0.0",
