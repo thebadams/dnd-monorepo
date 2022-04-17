@@ -3,7 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
-	output = "../../../../node_modules/.prisma/@dnd-5e-api/client"
+  output   = "../../../../node_modules/.prisma/@dnd-5e-api/client"
 }
 
 datasource db {
@@ -23,29 +23,29 @@ enum School {
 }
 
 enum Level {
-	Cantrip
-	First
-	Second
-	Third
-	Fourth
-	Fifth
-Sixth
-	Seventh
-	Eighth
-	Ninth
+  Cantrip
+  First
+  Second
+  Third
+  Fourth
+  Fifth
+  Sixth
+  Seventh
+  Eighth
+  Ninth
 }
 
 model Spell {
-  id Int @id @default(autoincrement())
-	name String @unique
-	level Level
-	school School
-	text String @db.Text()
-	atHigherLevels String? @db.Text()
-	verbal Boolean
-	somatic Boolean
-	material Boolean
-	cost String?
-	concentration Boolean
-	ritual Boolean
+  id             Int     @id @default(autoincrement())
+  name           String  @unique
+  level          Level
+  school         School
+  text           String  @db.Text()
+  atHigherLevels String? @db.Text()
+  verbal         Boolean
+  somatic        Boolean
+  material       Boolean
+  cost           String?
+  concentration  Boolean
+  ritual         Boolean
 }
