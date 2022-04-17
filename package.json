@@ -5,11 +5,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "turbo run build",
+    "build": "nx run-many --target=build --all",
     "dev": "turbo run dev",
-    "dev:api": "turbo run dev --filter=dnd-5e-api",
-    "watch:api": "turbo run watch --filter=dnd-5e-api"
+    "dev:api": "nx run dnd-5e-api:dev",
+    "watch:api": "nx run dnd-5e-api:watch",
+		"test": "nx run-many --target=test --all",
+		"test:api": "nx run dnd-5e-api:test"
   },
   "workspaces": [
     "apps/**/*",
