@@ -13,7 +13,8 @@
   "scripts": {
     "build": "prisma generate && tsc -p tsconfig.json",
 		"format": "prisma format",
-		"migrate": "prisma migrate dev"
+		"migrate": "prisma migrate dev",
+		"start": "sudo docker-compose start"
   },
 	"nx": {
 		"targets": {
@@ -21,13 +22,12 @@
 				"outputs": ["./prisma/migrations/*", "../../../../node_modules/.prisma/dnd-5e-api/client/"],
 				"dependsOn": [{
 					"target": "start",
-					"projects": "dependencies"
+					"projects": "self"
 				}]
 						}
 		}
 	},
   "dependencies": {
-    "@prisma/client": "^3.12.0",
-		"@dnd-5e-api/docker": "workspace: *"
+    "@prisma/client": "^3.12.0"
   }
 }
