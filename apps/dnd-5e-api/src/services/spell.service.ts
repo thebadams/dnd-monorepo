@@ -5,11 +5,9 @@ export const getAllSpells = async () => {
     const spells = await prisma.spell.findMany();
     return spells;
   } catch (error) {
-    if (error instanceof Error) {
-      throw {
-        message: error.message,
-        error,
-      };
-    }
+    console.error(error);
+    throw {
+      message: "There was an error getting Spells",
+    };
   }
 };

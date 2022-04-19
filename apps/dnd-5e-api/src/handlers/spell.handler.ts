@@ -7,6 +7,7 @@ export const getAllSpellsHandler: RouteHandlerMethod = async (
 ) => {
   try {
     const spells = await getAllSpells();
+    console.log("SPELLS", spells);
     if (spells && spells.length === 0) {
       reply.statusCode = 404;
       return {
@@ -19,12 +20,8 @@ export const getAllSpellsHandler: RouteHandlerMethod = async (
       };
     }
   } catch (error) {
-    if (error instanceof Error) {
-      reply.statusCode = 500;
+    reply.statusCode = 500;
 
-      return {
-        message: error.message,
-      };
-    }
+    return error;
   }
 };
