@@ -6,7 +6,7 @@ export const getAllSpells = async () => {
     return spells;
   } catch (error) {
     if (error instanceof Error) {
-      return {
+      throw {
         message: error.message,
         error,
       };
