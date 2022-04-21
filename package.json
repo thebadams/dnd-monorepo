@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@prisma/client": "^3.12.0",
+    "fastify": "^3.28.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
