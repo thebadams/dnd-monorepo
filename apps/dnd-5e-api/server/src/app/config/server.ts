@@ -1,6 +1,7 @@
+import { RegisterServerFunction } from '@dnd-monorepo/fastify-utilities';
 import fastify from 'fastify';
 
-export const registerServer = async () => {
+export const registerServer: RegisterServerFunction = async () => {
   const server = fastify({ logger: true });
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -8,5 +9,8 @@ export const registerServer = async () => {
     return 'Hello World';
   });
 
-  return server;
+  return {
+    server,
+    port: 4000,
+  };
 };

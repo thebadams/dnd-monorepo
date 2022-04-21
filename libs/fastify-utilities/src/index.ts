@@ -1,1 +1,1 @@
-export * from './lib/fastify-utilities';
+export * from './lib/bootstrap';
