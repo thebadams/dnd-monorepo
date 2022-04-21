@@ -1,21 +1,27 @@
 {
-  "extends": "@nrwl/workspace/presets/npm.json",
   "npmScope": "dnd-monorepo",
-	"workspaceLayout": {
-		"appsDir": "apps",
-		"libsDir": "libs"
-	},
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": [
           "build",
-          "test",
           "lint",
-          "package",
-          "prepare",
-					"format"
+          "test",
+          "e2e"
         ]
       }
     }
@@ -26,32 +32,6 @@
         "target": "build",
         "projects": "dependencies"
       }
-    ],
-    "prepare": [
-      {
-        "target": "prepare",
-        "projects": "dependencies"
-      }
-    ],
-    "package": [
-      {
-        "target": "package",
-        "projects": "dependencies"
-      }
-    ],
-		"test": [
-			{
-				"target": "test",
-				"projects": "dependencies"
-			}
-		]
-  },
-  "affected": {
-    "defaultBase": "main"
-  },
-  "pluginsConfig": {
-    "@nrwl/js": {
-      "analyzeSourceFiles": false
-    }
+    ]
   }
 }
