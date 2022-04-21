@@ -1,3 +1,1 @@
-export function dnd5eApiPrisma(): string {
-  return 'dnd-5e-api-prisma';
-}
+export * from '../../../../../node_modules/.prisma/dnd-5e-api/client';
