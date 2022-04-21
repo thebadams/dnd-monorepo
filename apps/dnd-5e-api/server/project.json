@@ -1,0 +1,52 @@
+{
+  "root": "apps/dnd-5e-api/server",
+  "sourceRoot": "apps/dnd-5e-api/server/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/dnd-5e-api/server",
+        "main": "apps/dnd-5e-api/server/src/main.ts",
+        "tsConfig": "apps/dnd-5e-api/server/tsconfig.app.json",
+        "assets": ["apps/dnd-5e-api/server/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/dnd-5e-api/server/src/environments/environment.ts",
+              "with": "apps/dnd-5e-api/server/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "dnd-5e-api-server:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dnd-5e-api/server/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/dnd-5e-api/server"],
+      "options": {
+        "jestConfig": "apps/dnd-5e-api/server/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

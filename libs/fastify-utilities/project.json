@@ -1,0 +1,23 @@
+{
+  "root": "libs/fastify-utilities",
+  "sourceRoot": "libs/fastify-utilities/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/fastify-utilities/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/fastify-utilities"],
+      "options": {
+        "jestConfig": "libs/fastify-utilities/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
