@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "dnd-5e-api-prisma": "libs/dnd-5e-api/prisma",
     "dnd-5e-api-server": "apps/dnd-5e-api/server",
     "fastify-utilities": "libs/fastify-utilities"
   }

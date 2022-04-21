@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dnd-monorepo/dnd-5e-api/prisma": [
+        "libs/dnd-5e-api/prisma/src/index.ts"
+      ],
       "@dnd-monorepo/fastify-utilities": ["libs/fastify-utilities/src/index.ts"]
     }
   },
