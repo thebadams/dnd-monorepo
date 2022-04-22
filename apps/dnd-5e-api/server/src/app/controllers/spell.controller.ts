@@ -1,12 +1,19 @@
+import { Prisma, Spell } from '@dnd-monorepo/dnd-5e-api/prisma';
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { getAllSpells } from '../services/spell.service';
+import { request } from 'http';
+import { findSpells, getAllSpells } from '../services/spell.service';
 
-export const getAllSpellsHandler = async (
-  _request: FastifyRequest,
+export const spellsHandler = async (
+  request: FastifyRequest,
   reply: FastifyReply
 ) => {
   try {
-    const spells = await getAllSpells();
+    let spells: Spell[];
+    if (request.query) {
+      spells = await findSpells(request.query);
+    } else {
+      spells = await getAllSpells();
+    }
     if (spells.length === 0) {
       reply.statusCode = 404;
       return {
