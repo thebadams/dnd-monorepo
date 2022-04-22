@@ -30,7 +30,11 @@
       "executor": "@nrwl/node:node",
       "options": {
         "buildTarget": "dnd-5e-api-server:build"
-      }
+      },
+			"dependsOn": [{
+				"target": "start",
+				"projects": "dependencies"
+			}]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -48,5 +52,6 @@
       }
     }
   },
-  "tags": []
+  "tags": [],
+	"implicitDependencies": ["dnd-5e-api-docker"]
 }

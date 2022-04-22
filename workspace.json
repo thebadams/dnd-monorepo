@@ -3,6 +3,7 @@
   "projects": {
     "dnd-5e-api-prisma": "libs/dnd-5e-api/prisma",
     "dnd-5e-api-server": "apps/dnd-5e-api/server",
+		"dnd-5e-api-docker": "libs/dnd-5e-api/docker",
     "fastify-utilities": "libs/fastify-utilities"
   }
 }

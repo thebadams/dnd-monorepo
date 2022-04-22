@@ -25,7 +25,23 @@
 				"command": "npx prisma generate",
 				"cwd": "./libs/dnd-5e-api/prisma"
 			}
+		},
+		"migrate" : {
+			"executor": "@nrwl/workspace:run-commands",
+			"outputs": [],
+			"options": {
+				"command": "npx prisma migrate dev",
+				"cwd": "./libs/dnd-5e-api/prisma",
+				"envFile": "./libs/dnd-5e-api/prisma/.env"
+			},
+			"dependsOn": [
+				{
+					"target": "start",
+					"projects": "dependencies"
+				}
+			]
 		}
   },
-  "tags": []
+  "tags": [],
+	"implicitDependencies": ["dnd-5e-api-docker"]
 }

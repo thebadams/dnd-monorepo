@@ -1,0 +1,33 @@
+{
+	"root": "libs/dnd-5e-api/docker",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/workspace:run-commands",
+			"outputs": [],
+			"options": {
+				"command": "sudo docker-compose up --no-start",
+				"cwd": "./libs/dnd-5e-api/docker",
+				"envFile": "./libs/dnd-5e-api/docker/.env"
+			}
+		},
+		"start": {
+			"executor": "@nrwl/workspace:run-commands",
+			"outputs": [],
+			"options": {
+				"command": "sudo docker-compose start",
+				"cwd": "./libs/dnd-5e-api/docker",
+				"envFile": "./libs/dnd-5e-api/docker/.env"
+			}
+		},
+		"stop": {
+			"executor": "@nrwl/workspace:run-commands",
+			"outputs": [],
+			"options": {
+				"command": "sudo docker-compose stop",
+				"cwd": "./libs/dnd-5e-api/docker",
+				"envFile": "./libs/dnd-5e-api/docker/.env"
+			}
+		}
+	}
+}

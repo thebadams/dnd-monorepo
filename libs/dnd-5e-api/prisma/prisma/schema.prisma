@@ -8,8 +8,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+enum School {
+	Abjuration
+	Evocation
+	Illusion
+	Necromancy
+	Transmutation
+	Divination
+	Enchantment
+	Conjuration
+}
+
+model Spell {
+	id Int @id @default(autoincrement())
+	name String
+	school School
+	level Int
+	atHigherLevel String?
+	text String
+	verbal Boolean
+	somatic Boolean
+	material Boolean
+	cost String?
+	
+	
 }
