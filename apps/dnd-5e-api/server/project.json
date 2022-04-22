@@ -10,7 +10,11 @@
         "outputPath": "dist/apps/dnd-5e-api/server",
         "main": "apps/dnd-5e-api/server/src/main.ts",
         "tsConfig": "apps/dnd-5e-api/server/tsconfig.app.json",
-        "assets": ["apps/dnd-5e-api/server/src/assets"]
+        "assets": ["apps/dnd-5e-api/server/src/assets", {
+					"glob": "schema.prisma",
+					"input": "libs/dnd-5e-api/prisma/prisma/",
+					"output": "."
+				}]
       },
       "configurations": {
         "production": {
@@ -31,10 +35,12 @@
       "options": {
         "buildTarget": "dnd-5e-api-server:build"
       },
-			"dependsOn": [{
-				"target": "start",
-				"projects": "dependencies"
-			}]
+      "dependsOn": [
+        {
+          "target": "start",
+          "projects": "dependencies"
+        }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -47,11 +53,11 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/dnd-5e-api/server"],
       "options": {
-        "jestConfig": "apps/dnd-5e-api/server/jest.config.js",
+        "jestConfig": "apps/dnd-5e-api/server/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
   "tags": [],
-	"implicitDependencies": ["dnd-5e-api-docker"]
+  "implicitDependencies": ["dnd-5e-api-docker"]
 }

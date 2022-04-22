@@ -14,7 +14,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/fastify-utilities"],
       "options": {
-        "jestConfig": "libs/fastify-utilities/jest.config.js",
+        "jestConfig": "libs/fastify-utilities/jest.config.ts",
         "passWithNoTests": true
       }
     }
