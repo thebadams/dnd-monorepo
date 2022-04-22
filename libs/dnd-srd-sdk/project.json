@@ -1,0 +1,45 @@
+{
+  "root": "libs/dnd-srd-sdk",
+  "sourceRoot": "libs/dnd-srd-sdk/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/dnd-srd-sdk",
+        "main": "libs/dnd-srd-sdk/src/index.ts",
+        "tsConfig": "libs/dnd-srd-sdk/tsconfig.lib.json",
+        "assets": ["libs/dnd-srd-sdk/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs dnd-srd-sdk {args.ver} {args.tag}",
+        "cwd": "dist/libs/dnd-srd-sdk"
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/dnd-srd-sdk/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dnd-srd-sdk"],
+      "options": {
+        "jestConfig": "libs/dnd-srd-sdk/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
